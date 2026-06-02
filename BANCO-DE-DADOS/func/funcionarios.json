@@ -1,0 +1,38 @@
+[
+  {
+    "empresaId": "1779235105476",
+    "funcionario": "554599263468@s.whatsapp.net",
+    "cargo": "vendedor",
+    "salario": 200,
+    "contratadoEm": 1779237013398,
+    "diasTrabalhados": 0,
+    "ultimoTrabalho": null,
+    "bonusPendente": 0,
+    "valeTransportePendente": 0,
+    "decimoTerceiro": 0
+  },
+  {
+    "empresaId": "1779235105476",
+    "funcionario": "351924846019@s.whatsapp.net",
+    "cargo": "vendedor",
+    "salario": 200,
+    "contratadoEm": 1779237026611,
+    "diasTrabalhados": 1,
+    "ultimoTrabalho": 1779237132131,
+    "bonusPendente": 0,
+    "valeTransportePendente": 0,
+    "decimoTerceiro": 0
+  },
+  {
+    "empresaId": "1779235105476",
+    "funcionario": "554988479895@s.whatsapp.net",
+    "cargo": "vendedor",
+    "salario": 200,
+    "contratadoEm": 1779238681100,
+    "diasTrabalhados": 0,
+    "ultimoTrabalho": null,
+    "bonusPendente": 0,
+    "valeTransportePendente": 0,
+    "decimoTerceiro": 0
+  }
+]

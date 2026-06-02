@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1779238375506",
+    "dono": "553891164328@s.whatsapp.net",
+    "criadoEm": 1779238375507,
+    "animais": [
+      {
+        "tipo": "galinha",
+        "compradoEm": 1779238404376,
+        "ultimaProducao": 1779238404376,
+        "fome": 100
+      },
+      {
+        "tipo": "vaca",
+        "compradoEm": 1779238420440,
+        "ultimaProducao": 1779238420440,
+        "fome": 100
+      },
+      {
+        "tipo": "porco",
+        "compradoEm": 1779238442176,
+        "ultimaProducao": 1779238442176,
+        "fome": 100
+      }
+    ],
+    "estoque": {
+      "racao": 22,
+      "ovos": 0,
+      "leite": 0,
+      "carne": 0
+    },
+    "equipamentos": {
+      "caminhao_ovos": true,
+      "caminhao_leite": true,
+      "trator": false
+    }
+  }
+]

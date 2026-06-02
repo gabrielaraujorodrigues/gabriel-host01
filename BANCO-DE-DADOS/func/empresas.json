@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1779235105476",
+    "dono": "553891164328@s.whatsapp.net",
+    "nome": "🎯 NVIDIA GeForce",
+    "marca": "NVIDIA",
+    "tipo": "geforce",
+    "caixa": 0,
+    "criadoEm": 1779235105477,
+    "vendasTotais": 0,
+    "lucroTotal": 0,
+    "historico": [
+      {
+        "data": "19/05/2026",
+        "hora": "21:32:12",
+        "tipo": "💼 PAGAMENTO",
+        "funcionario": "351924846019@s.whatsapp.net",
+        "valor": 200,
+        "descricao": "Salário pago ao funcionário"
+      }
+    ]
+  }
+]

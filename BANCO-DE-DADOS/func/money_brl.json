@@ -1,0 +1,3413 @@
+[
+  {
+    "grupo": "120363426693771319@g.us",
+    "usuarios": [
+      {
+        "id": "553891164328@s.whatsapp.net",
+        "saldo": 878696.5066666668,
+        "banco": 5200,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": "19/05/2026",
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:37:27",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "11:01:01",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "15:21:07",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:24:06",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 3543.75,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 393.75 (10%)"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:24:02",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 3/12 | Faltam 9"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:24:00",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 2/12 | Faltam 10"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:57",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 1/12 | Faltam 11"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:47",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:24",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 393.75,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 43.75 (10%)"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:20",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 11/12 | Faltam 1"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:17",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 10/12 | Faltam 2"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:13",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 9/12 | Faltam 3"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:11",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 8/12 | Faltam 4"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:07",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 7/12 | Faltam 5"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:23:04",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 6/12 | Faltam 6"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:58",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 5/12 | Faltam 7"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:50",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 4/12 | Faltam 8"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:47",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 3/12 | Faltam 9"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:42",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 2/12 | Faltam 10"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:37",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 1/12 | Faltam 11"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:23",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:13",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:22:09",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:05:12",
+            "tipo": "🏦 DEPÓSITO",
+            "valor": 5000,
+            "descricao": "Depósito no banco KimoriBank"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:04:16",
+            "tipo": "❌ SAÍDA",
+            "valor": 3000,
+            "descricao": "Compra de 🚛 Caminhão para vender leite"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:04:08",
+            "tipo": "❌ SAÍDA",
+            "valor": 2000,
+            "descricao": "Compra de 🚚 Caminhão para vender ovos"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:03:55",
+            "tipo": "❌ SAÍDA",
+            "valor": 20,
+            "descricao": "Compra de 🍲 Ração para animais"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:03:46",
+            "tipo": "❌ SAÍDA",
+            "valor": 20,
+            "descricao": "Compra de 🍲 Ração para animais"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "22:00:52",
+            "tipo": "❌ SAÍDA",
+            "valor": 400,
+            "descricao": "Compra do pet gato"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:58:43",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 3150,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 350.00 (10%)"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:58:37",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 4/12 | Faltam 8"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:54:51",
+            "tipo": "❌ SAÍDA",
+            "valor": 200,
+            "descricao": "Compra de 10 ração"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:54:42",
+            "tipo": "❌ SAÍDA",
+            "valor": 200,
+            "descricao": "Compra de 10 ração"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:54:02",
+            "tipo": "❌ SAÍDA",
+            "valor": 300,
+            "descricao": "Compra de porco"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:53:40",
+            "tipo": "❌ SAÍDA",
+            "valor": 500,
+            "descricao": "Compra de vaca"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:53:24",
+            "tipo": "❌ SAÍDA",
+            "valor": 50,
+            "descricao": "Compra de galinha"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:52:55",
+            "tipo": "❌ SAÍDA",
+            "valor": 10000,
+            "descricao": "Compra da fazenda"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:48:19",
+            "tipo": "❌ SAÍDA",
+            "valor": 1000,
+            "descricao": "Alistamento policial"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:32:12",
+            "tipo": "❌ SAÍDA",
+            "valor": 200,
+            "descricao": "Pagamento de salário para 351924846019"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "20:58:25",
+            "tipo": "❌ SAÍDA",
+            "valor": 100000,
+            "descricao": "Compra da empresa 🎯 NVIDIA GeForce"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "20:58:09",
+            "tipo": "✅ ENTRADA",
+            "valor": 1000000,
+            "descricao": "Adicionado pelo dono"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "20:55:37",
+            "tipo": "❌ SAÍDA",
+            "valor": 5000,
+            "descricao": "Compra do 🎮 PC Gamer"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "16:26:44",
+            "tipo": "🏦 DEPÓSITO",
+            "valor": 100,
+            "descricao": "Depósito no banco KimoriBank"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "16:26:32",
+            "tipo": "🏦 BANCO ESCOLHIDO",
+            "valor": 0,
+            "descricao": "💜 KimoriBank - Limite PIX: R$ 10000.00"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "16:25:50",
+            "tipo": "📱 COMPRA DE CELULAR",
+            "valor": 150,
+            "descricao": "Samsung J2 Mini adquirido (RAM: 1GB)"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "16:22:13",
+            "tipo": "✅ ENTRADA",
+            "valor": 10000,
+            "descricao": "Adicionado pelo dono"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:05:27",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 1,
+            "descricao": "Para: 557398343428@s.whatsapp.net | Taxa: R$ 0.02"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:05:10",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 1,
+            "descricao": "Para: 555189292852@s.whatsapp.net | Taxa: R$ 0.02"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:42:47",
+            "tipo": "🏦 DEPÓSITO",
+            "valor": 100,
+            "descricao": "Depósito na poupança"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:37:21",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 3/12"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:37:15",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 2/12"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:36:38",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 810,
+            "descricao": "De: 558191703157@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:34:30",
+            "tipo": "💳 PAGAMENTO",
+            "valor": 437.5,
+            "descricao": "Parcela 1/12"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:32:57",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 1,
+            "descricao": "Para: 558191703157@s.whatsapp.net | Taxa: R$ 0.02"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:32:48",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 51,
+            "descricao": "De: 558191703157@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:30:00",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 5000,
+            "descricao": "Para: 557388610011@s.whatsapp.net | Taxa: R$ 100.00"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:29:33",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 50,
+            "descricao": "Para: 557388610011@s.whatsapp.net | Taxa: R$ 1.00"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:24:59",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:24:08",
+            "tipo": "🔨 TRABALHO",
+            "valor": 45,
+            "descricao": "cuidando de pets"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:23:58",
+            "tipo": "🔨 TRABALHO",
+            "valor": 79,
+            "descricao": "cuidando de pets"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:23:51",
+            "tipo": "🔨 TRABALHO",
+            "valor": 172,
+            "descricao": "motorista de app"
+          }
+        ],
+        "celular": "j2mini",
+        "bancoAtual": "kimoribank"
+      },
+      {
+        "id": "258849517571@s.whatsapp.net",
+        "saldo": 54.266666666666666,
+        "banco": 0,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "13:23:08",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558191703157@s.whatsapp.net",
+        "saldo": 54.58000000000017,
+        "banco": 246,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": "21/05/2026",
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:38:50",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:54:45",
+            "tipo": "🏦 DEPÓSITO",
+            "valor": 146,
+            "descricao": "Depósito no banco KimoriBank"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:54:29",
+            "tipo": "🏦 DEPÓSITO",
+            "valor": 100,
+            "descricao": "Depósito no banco KimoriBank"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:54:08",
+            "tipo": "🏦 BANCO ESCOLHIDO",
+            "valor": 0,
+            "descricao": "💜 KimoriBank - Limite PIX: R$ 10000.00"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:53:13",
+            "tipo": "📱 COMPRA DE CELULAR",
+            "valor": 1800,
+            "descricao": "Nubia Red Magic 9 Pro adquirido (RAM: 4GB)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:50:13",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:50:10",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:50:00",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:49:51",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:49:38",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:49:32",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:49:15",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:49:08",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:48:13",
+            "tipo": "🎉 LIQUIDAÇÃO ANTECIPADA",
+            "valor": 4725,
+            "descricao": "Empréstimo quitado antecipadamente! Desconto de R$ 525.00 (10%)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:47:03",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "12x de R$ 437.50"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:45:53",
+            "tipo": "🔨 TRABALHO",
+            "valor": 160,
+            "descricao": "aula particular"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:45:44",
+            "tipo": "🔨 TRABALHO",
+            "valor": 210,
+            "descricao": "freelance de programador"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:45:38",
+            "tipo": "🔨 TRABALHO",
+            "valor": 78,
+            "descricao": "cuidando de pets"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:45:35",
+            "tipo": "🔨 TRABALHO",
+            "valor": 81,
+            "descricao": "vendedor ambulante"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:45:31",
+            "tipo": "🔨 TRABALHO",
+            "valor": 88,
+            "descricao": "motorista de app"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "09:51:10",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:36:38",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 810,
+            "descricao": "Para: 553891164328@s.whatsapp.net | Taxa: R$ 16.20"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:34:35",
+            "tipo": "🔨 TRABALHO",
+            "valor": 99,
+            "descricao": "design gráfico"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:34:30",
+            "tipo": "🔨 TRABALHO",
+            "valor": 112,
+            "descricao": "bico de entregador"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:34:26",
+            "tipo": "🔨 TRABALHO",
+            "valor": 119,
+            "descricao": "consultoria"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:34:14",
+            "tipo": "🔨 TRABALHO",
+            "valor": 356,
+            "descricao": "consultoria"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:33:59",
+            "tipo": "🔨 TRABALHO",
+            "valor": 137,
+            "descricao": "aula particular"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:32:57",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 1,
+            "descricao": "De: 553891164328@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:32:48",
+            "tipo": "💸 TRANSFERÊNCIA ENVIADA",
+            "valor": 51,
+            "descricao": "Para: 553891164328@s.whatsapp.net | Taxa: R$ 1.02"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:30:46",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ],
+        "celular": "nubia_9",
+        "bancoAtual": "kimoribank"
+      },
+      {
+        "id": "554791771335@s.whatsapp.net",
+        "saldo": 54.266666666666666,
+        "banco": 0,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "13:25:13",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557388610011@s.whatsapp.net",
+        "saldo": 5267.066666666666,
+        "banco": 0,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:41:01",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "17:06:44",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "12:17:10",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:30:00",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 5000,
+            "descricao": "De: 553891164328@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:29:33",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 50,
+            "descricao": "De: 553891164328@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:25:52",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "447402455216@s.whatsapp.net",
+        "saldo": 162.8,
+        "banco": 0,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:41:24",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "16:19:12",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "13:27:01",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "555189292852@s.whatsapp.net",
+        "saldo": 109.53333333333333,
+        "banco": 0,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "16:21:10",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:05:10",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 1,
+            "descricao": "De: 553891164328@s.whatsapp.net"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:04:17",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557398343428@s.whatsapp.net",
+        "saldo": 55.266666666666666,
+        "banco": 0,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "14:06:15",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:05:27",
+            "tipo": "💸 TRANSFERÊNCIA RECEBIDA",
+            "valor": 1,
+            "descricao": "De: 553891164328@s.whatsapp.net"
+          }
+        ]
+      },
+      {
+        "id": "559985054068@s.whatsapp.net",
+        "saldo": 108.53333333333333,
+        "banco": 0,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "10:44:54",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "17:32:24",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "556681147547@s.whatsapp.net",
+        "saldo": 108.53333333333333,
+        "banco": 0,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "09:37:42",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:41:48",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "351924846019@s.whatsapp.net",
+        "saldo": 254.26666666666665,
+        "banco": 0,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "21:32:12",
+            "tipo": "✅ ENTRADA",
+            "valor": 200,
+            "descricao": "Salário da empresa 🎯 NVIDIA GeForce"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "14:59:14",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558191495318@s.whatsapp.net",
+        "saldo": 54.266666666666666,
+        "banco": 0,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "15:00:52",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557398176607@s.whatsapp.net",
+        "saldo": 162.8,
+        "banco": 0,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "11:28:33",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "12:17:45",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "16:22:59",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "27733566222@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "17:29:32",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557499620423@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "21:02:09",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "554599263468@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "21:29:14",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "554988479895@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "17:06:47",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "19/05/2026",
+            "hora": "21:52:27",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511987854289@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "19/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "19/05/2026",
+            "hora": "22:30:55",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "556193970798@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "13:08:09",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "15813415761@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:37:52",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "10:44:55",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511986059638@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "16:20:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "559984814822@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:38:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "2255545741451@lid",
+    "usuarios": [
+      {
+        "id": "2255545741451@lid",
+        "saldo": 500,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": null,
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": []
+      }
+    ]
+  },
+  {
+    "grupo": "120363405391550559@g.us",
+    "usuarios": [
+      {
+        "id": "553891164328@s.whatsapp.net",
+        "saldo": 717.0666666666666,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:02:37",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "00:10:42",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "10:58:31",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511950679197@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "12:08:27",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "11:04:52",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511964528424@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:01",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:15",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557581924475@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:03:09",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:16",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5522988151283@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:32:56",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:50",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:16",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5516993609199@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:52:26",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:08",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:17",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5527981152399@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:55:19",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:11",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:17",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557398176607@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:20",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557499620423@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:42:31",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:25",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5519995729970@s.whatsapp.net",
+        "saldo": 58.53333333333332,
+        "banco": 0,
+        "celular": "moto_g20",
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:29:08",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:36:03",
+            "tipo": "📱 COMPRA DE CELULAR",
+            "valor": 550,
+            "descricao": "Moto G20 adquirido (RAM: 3GB)"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:28",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558191703157@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:47:07",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:31:39",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511963957374@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:06",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:32:06",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "555399066771@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:01:16",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:33:18",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5521966808192@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:50:31",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:14",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:33:56",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "555481265298@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:19:38",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:02:59",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:34:17",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "62895382095899@s.whatsapp.net",
+        "saldo": 662.8,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:34:07",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:59",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:36:02",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558796035904@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "23:36:23",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511986059638@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:22:23",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:39:33",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "553181143116@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "23:43:22",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "559985054068@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "23:43:30",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5518997553828@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:00:21",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "23:45:36",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511910420917@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "22/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "22/05/2026",
+            "hora": "00:15:46",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5512982930103@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "18:50:34",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511911919593@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:10:45",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "6285882568625@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:15:35",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "2290192725303@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:33:09",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557781681246@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:43:12",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5521988077036@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:47:47",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "5511967615055@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:54:08",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "553591416439@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:55:28",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "559888252252@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:55:54",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558276021469@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "19:57:19",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557388610011@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:01:15",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "553191692408@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:03:24",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "556799823958@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:08:38",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "558893691311@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:24:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "447402455216@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:28:33",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "152411645677743@lid",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "23/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "23/05/2026",
+            "hora": "20:49:40",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "120363410056015708@g.us",
+    "usuarios": [
+      {
+        "id": "258856680190@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "15:49:59",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "553891164328@s.whatsapp.net",
+        "saldo": 5926.533333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": "21/05/2026",
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": true,
+          "valor": 5000,
+          "totalPagar": 5250,
+          "parcelas": 24,
+          "parcelasPagas": 0,
+          "valorParcela": 218.75,
+          "proximaParcela": 1779952455358
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:14:15",
+            "tipo": "🏦 EMPRÉSTIMO",
+            "valor": 5000,
+            "descricao": "24x de R$ 218.75"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:10:49",
+            "tipo": "🔨 TRABALHO",
+            "valor": 120,
+            "descricao": "bico de entregador"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:10:40",
+            "tipo": "🔨 TRABALHO",
+            "valor": 198,
+            "descricao": "consultoria"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:10:07",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "15:50:29",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "554988479895@s.whatsapp.net",
+        "saldo": 608.5333333333333,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:06:23",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          },
+          {
+            "data": "20/05/2026",
+            "hora": "15:50:35",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "258843245433@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "15:51:49",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "557388610011@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "16:10:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "447402455216@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "16:10:02",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "48729752081@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "20/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "20/05/2026",
+            "hora": "17:08:04",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "258852017251@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:06:20",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "258856404717@s.whatsapp.net",
+        "saldo": 9999.996666666644,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": "21/05/2026",
+        "investimentos": {
+          "ativo": true,
+          "valor": 893.27,
+          "dataInicio": 1779347736863,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:16:40",
+            "tipo": "❌ SAÍDA",
+            "valor": 490000,
+            "descricao": "Removido pelo dono"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:15:36",
+            "tipo": "📈 INVESTIMENTO",
+            "valor": 893.27,
+            "descricao": "Investimento iniciado"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:15:29",
+            "tipo": "✅ ENTRADA",
+            "valor": 500000,
+            "descricao": "Adicionado pelo dono"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:11:23",
+            "tipo": "🔨 TRABALHO",
+            "valor": 54,
+            "descricao": "garçom em evento"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:11:19",
+            "tipo": "🔨 TRABALHO",
+            "valor": 57,
+            "descricao": "vendedor ambulante"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:11:16",
+            "tipo": "🔨 TRABALHO",
+            "valor": 76,
+            "descricao": "design gráfico"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:11:14",
+            "tipo": "🔨 TRABALHO",
+            "valor": 44,
+            "descricao": "venda de artesanato"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:10:56",
+            "tipo": "🔨 TRABALHO",
+            "valor": 108,
+            "descricao": "bico de entregador"
+          },
+          {
+            "data": "21/05/2026",
+            "hora": "04:07:22",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "258856933878@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:10:34",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      },
+      {
+        "id": "258841372561@s.whatsapp.net",
+        "saldo": 554.2666666666667,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": "21/05/2026",
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": [
+          {
+            "data": "21/05/2026",
+            "hora": "04:17:00",
+            "tipo": "💰 SALÁRIO",
+            "valor": 54.266666666666666,
+            "descricao": "Salário diário recebido"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "267710210564152@lid",
+    "usuarios": [
+      {
+        "id": "553891164328@s.whatsapp.net",
+        "saldo": 500,
+        "banco": 0,
+        "celular": null,
+        "bancoAtual": null,
+        "ultimoSalario": null,
+        "ultimoTrabalho": null,
+        "investimentos": {
+          "ativo": false,
+          "valor": 0,
+          "dataInicio": null,
+          "rendimento": 0
+        },
+        "emprestimo": {
+          "ativo": false,
+          "valor": 0,
+          "totalPagar": 0,
+          "parcelas": 0,
+          "parcelasPagas": 0,
+          "valorParcela": 0,
+          "proximaParcela": null
+        },
+        "historico": []
+      }
+    ]
+  }
+]
