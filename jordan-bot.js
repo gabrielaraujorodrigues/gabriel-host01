@@ -10,6 +10,7 @@ const {
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
+  fetchLatestWaWebVersion,
   makeCacheableSignalKeyStore,
   isJidGroup,
 } = require('baileys');
@@ -662,24 +663,40 @@ async function startBot() {
   await fs.ensureDir(TEMP_DIR);
 
   const { state, saveCreds } = await useMultiFileAuthState(SESSION_DIR);
-  const { version } = await fetchLatestBaileysVersion();
+
+  // Usa versão real do WhatsApp Web; fallback para versão estável conhecida
+  let version;
+  try {
+    const r = await fetchLatestWaWebVersion({});
+    version = r.version;
+    console.log('[VERSÃO] WA Web:', JSON.stringify(version));
+  } catch {
+    try {
+      const r = await fetchLatestBaileysVersion();
+      version = r.version;
+    } catch {
+      version = [2, 3000, 1015901307]; // versão estável de fallback
+    }
+    console.log('[VERSÃO] Fallback:', JSON.stringify(version));
+  }
 
   sock = makeWASocket({
     version,
     auth: {
       creds: state.creds,
-      keys: makeCacheableSignalKeyStore(state.keys, pino({level:'silent'})),
+      keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'silent' })),
     },
-    logger: pino({level:'silent'}),
+    logger: pino({ level: 'silent' }),
     printQRInTerminal: true,
-    browser: [BOT_NAME, 'Chrome', '120.0.0'],
+    browser: ['Ubuntu', 'Chrome', '20.0.04'],
     generateHighQualityLinkPreview: false,
     syncFullHistory: false,
     markOnlineOnConnect: true,
     connectTimeoutMs:    60_000,
-    keepAliveIntervalMs: 15_000,  // ping a cada 15s para não cair
+    keepAliveIntervalMs: 15_000,
     retryRequestDelayMs:  2_000,
     maxMsgRetryCount: 5,
+    defaultQueryTimeoutMs: 60_000,
   });
 
   sock.ev.on('creds.update', saveCreds);
