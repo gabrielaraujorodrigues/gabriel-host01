@@ -1,0 +1,31 @@
+{
+  "welcome": {
+    "status": true,
+    "modo": "foto",
+    "texto": {
+      "ativo": false,
+      "legendabv": "BEM VINDO (A) 🏳\n\nᴀᴏ ᴇɴᴛʀᴀʀ ꜱᴇ ᴀᴘʀᴇꜱᴇɴᴛᴀʀ ᴄᴏᴍ\n》ꜰᴏᴛᴏ ᴇᴍ ᴠɪꜱᴜ ᴜɴɪᴄᴀ:\n》ɴᴏᴍᴇ:\n》ɪᴅᴀᴅᴇ:\n》ᴄɪᴅᴀᴅᴇ:",
+      "legendasaiu": "𝙾 #numerodele# 𝙰𝙲𝙰𝙱𝙰 𝙳𝙴 𝚂𝙰𝙸𝚁 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎"
+    },
+    "foto": {
+      "ativo": true,
+      "legendabv": "✨ 𝙾𝙻𝙰 #numerodele# 𝚂𝙴𝙹𝙰 𝙱𝙴𝙼 𝚅𝙸𝙽𝙳𝙾[ 𝙰 ] 𝙰𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n\n• 𝙻𝙴𝙸𝙰 𝙰𝚂 𝚁𝙴𝙶𝚁𝙰𝚂 𝙴 𝙰𝙿𝚁𝙾𝚅𝙴𝙸𝚃𝙴 𝙾 𝙶𝚁𝚄𝙿𝙾\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎",
+      "legendasaiu": "𝙾 #numerodele# 𝙰𝙲𝙰𝙱𝙰 𝙳𝙴 𝚂𝙰𝙸𝚁 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎"
+    },
+    "audio": {
+      "ativo": false,
+      "legendabv": "✨ 𝙾𝙻𝙰 #numerodele# 𝚂𝙴𝙹𝙰 𝙱𝙴𝙼 𝚅𝙸𝙽𝙳𝙾[ 𝙰 ] 𝙰𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n\n• 𝙻𝙴𝙸𝙰 𝙰𝚂 𝚁𝙴𝙶𝚁𝙰𝚂 𝙴 𝙰𝙿𝚁𝙾𝚅𝙴𝙸𝚃𝙴 𝙾 𝙶𝚁𝚄𝙿𝙾\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎",
+      "legendasaiu": "𝙾 #numerodele# 𝙰𝙲𝙰𝙱𝙰 𝙳𝙴 𝚂𝙰𝙸𝚁 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎"
+    },
+    "video": {
+      "ativo": false,
+      "legendabv": "✨ 𝙾𝙻𝙰 #numerodele# 𝚂𝙴𝙹𝙰 𝙱𝙴𝙼 𝚅𝙸𝙽𝙳𝙾[ 𝙰 ] 𝙰𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n\n• 𝙻𝙴𝙸𝙰 𝙰𝚂 𝚁𝙴𝙶𝚁𝙰𝚂 𝙴 𝙰𝙿𝚁𝙾𝚅𝙴𝙸𝚃𝙴 𝙾 𝙶𝚁𝚄𝙿𝙾\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎",
+      "legendasaiu": "𝙾 #numerodele# 𝙰𝙲𝙰𝙱𝙰 𝙳𝙴 𝚂𝙰𝙸𝚁 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎"
+    },
+    "sticker": {
+      "ativo": false,
+      "legendabv": "✨ 𝙾𝙻𝙰 #numerodele# 𝚂𝙴𝙹𝙰 𝙱𝙴𝙼 𝚅𝙸𝙽𝙳𝙾[ 𝙰 ] 𝙰𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n\n• 𝙻𝙴𝙸𝙰 𝙰𝚂 𝚁𝙴𝙶𝚁𝙰𝚂 𝙴 𝙰𝙿𝚁𝙾𝚅𝙴𝙸𝚃𝙴 𝙾 𝙶𝚁𝚄𝙿𝙾\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎",
+      "legendasaiu": "𝙾 #numerodele# 𝙰𝙲𝙰𝙱𝙰 𝙳𝙴 𝚂𝙰𝙸𝚁 𝙳𝙾 𝙶𝚁𝚄𝙿𝙾 #nomedogp#\n> 𝐊𝐢𝐦𝐨𝐫𝐢 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝︎"
+    }
+  }
+}
