@@ -125,13 +125,77 @@ async function baixarMusica(query) {
     { timeout: 120000 }
   );
 
-  const files = fs.readdirSync(TEMP_DIR)
+  const latest = fs.readdirSync(TEMP_DIR)
     .filter(f => f.startsWith('music_'))
     .map(f => ({ f, t: fs.statSync(path.join(TEMP_DIR,f)).mtimeMs }))
-    .sort((a,b) => b.t - a.t);
+    .sort((a,b) => b.t - a.t)[0];
 
-  if (!files.length) throw new Error('Download falhou');
-  return { file: path.join(TEMP_DIR, files[0].f), title: vid.title, dur: vid.timestamp };
+  if (!latest) throw new Error('Download falhou');
+  return { file: path.join(TEMP_DIR, latest.f), title: vid.title, dur: vid.timestamp };
+}
+
+// ═══════════════════════════════════════════════════
+// VÍDEO — yt-dlp universal (YT, TikTok, Instagram…)
+// ═══════════════════════════════════════════════════
+async function baixarVideo(input) {
+  await fs.ensureDir(TEMP_DIR);
+
+  // Se não for URL, busca no YouTube
+  const isUrl = /^https?:\/\//i.test(input);
+  const target = isUrl ? input : `ytsearch1:${input}`;
+
+  const tag  = `vid_${Date.now()}`;
+  const base = path.join(TEMP_DIR, tag);
+
+  await execAsync(
+    `${YTDLP} -f "best[ext=mp4][filesize<48M]/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" ` +
+    `--max-filesize 48M --merge-output-format mp4 ` +
+    `-o "${base}.%(ext)s" "${target}" --no-playlist -q`,
+    { timeout: 180000 }
+  );
+
+  const latest = fs.readdirSync(TEMP_DIR)
+    .filter(f => f.startsWith(tag))
+    .map(f => ({ f, t: fs.statSync(path.join(TEMP_DIR,f)).mtimeMs }))
+    .sort((a,b) => b.t - a.t)[0];
+
+  if (!latest) throw new Error('Download do vídeo falhou');
+  return path.join(TEMP_DIR, latest.f);
+}
+
+// ═══════════════════════════════════════════════════
+// CONSULTA DE NÚMERO (só dono)
+// ═══════════════════════════════════════════════════
+async function consultarNumero(rawNum) {
+  const num = rawNum.replace(/\D/g,'');
+  if (num.length < 8) throw new Error('Número inválido');
+
+  const ddd = num.length >= 11 ? num.slice(-11,-9) : num.slice(0,2);
+
+  let estado = '', cidade = '';
+  try {
+    const r = await fetch(`https://brasilapi.com.br/api/ddd/v1/${ddd}`, {timeout: 8000});
+    if (r.ok) {
+      const d = await r.json();
+      estado = d.state  || '';
+      cidade = (d.cities || []).slice(0,3).join(', ');
+    }
+  } catch {}
+
+  const operadoras = {
+    '11':'Vivo','12':'Claro','13':'TIM','15':'Vivo','17':'TIM','18':'Claro','21':'Claro',
+    '25':'Oi','27':'Vivo','31':'TIM','41':'Vivo','51':'Claro','61':'Vivo','71':'Claro',
+    '81':'TIM','85':'Vivo','86':'TIM','91':'Claro','92':'Vivo','95':'Oi','96':'Vivo',
+  };
+  const op = operadoras[ddd] || 'Desconhecida';
+
+  return `📱 *Consulta de Número*\n\n` +
+         `Número: *+55 ${num}*\n` +
+         `DDD: *${ddd}*\n` +
+         `Estado: *${estado || 'N/A'}*\n` +
+         `Cidades: *${cidade || 'N/A'}*\n` +
+         `Operadora provável: *${op}*\n\n` +
+         `_Resultado aproximado baseado em DDD_`;
 }
 
 // ═══════════════════════════════════════════════════
@@ -200,30 +264,34 @@ async function cmdPlay(msg, gid, args) {
 
 async function cmdMenu(msg, gid, meta) {
   const txt =
-`╔══════════════════════════╗
-║  🤖 *JORDAN BOT OFICIAL* 🤖  ║
-╠══════════════════════════╣
-║                            ║
-║  🎵 *MÚSICA*               ║
-║  ${PREFIX}play <música>          ║
-║                            ║
-║  🎮 *GAMES*                 ║
-║  ${PREFIX}quiz  — Quiz surpresa  ║
-║  ${PREFIX}dado  — Jogar dado     ║
-║  ${PREFIX}8ball — Bola mágica   ║
-║                            ║
-║  🛡️ *PROTEÇÃO DE GRUPO*    ║
-║  ${PREFIX}fechar / ${PREFIX}abrir      ║
-║  ${PREFIX}bemvindo on/off        ║
-║  ${PREFIX}autoclose on/off       ║
-║  ${PREFIX}apresentados           ║
-║  ${PREFIX}monitoring on/off      ║
-║                            ║
-║  ℹ️ *INFO*                   ║
-║  ${PREFIX}ping  — Status bot     ║
-║  ${PREFIX}dono  — Info do dono   ║
-║                            ║
-╚══════════════════════════╝
+`╔══════════════════════════════════╗
+║    🤖 *JORDAN BOT OFICIAL* 🤖    ║
+╠══════════════════════════════════╣
+║                                  ║
+║  🎵 *MÚSICA & VÍDEOS*            ║
+║  ${PREFIX}play <música>  — baixar MP3   ║
+║  ${PREFIX}yt <link/busca> — vídeo YT   ║
+║  ${PREFIX}tiktok <link> — vídeo TikTok ║
+║  ${PREFIX}insta <link>  — vídeo Insta  ║
+║                                  ║
+║  🎮 *GAMES*                      ║
+║  ${PREFIX}quiz   — Quiz surpresa        ║
+║  ${PREFIX}dado   — Jogar dado           ║
+║  ${PREFIX}8ball  — Bola mágica          ║
+║                                  ║
+║  🛡️ *PROTEÇÃO DE GRUPO*          ║
+║  ${PREFIX}fechar / ${PREFIX}abrir             ║
+║  ${PREFIX}bemvindo on/off                ║
+║  ${PREFIX}autoclose on/off               ║
+║  ${PREFIX}apresentados                   ║
+║  ${PREFIX}monitoring on/off              ║
+║                                  ║
+║  ℹ️ *INFO*                        ║
+║  ${PREFIX}ping   — Status do bot         ║
+║  ${PREFIX}dono   — Info do dono          ║
+║  ${PREFIX}numero — Consultar número 🔒   ║
+║                                  ║
+╚══════════════════════════════════╝
 🤖 *${BOT_NAME}*
 👑 Dono: *${OWNER_NAME}*`;
 
@@ -600,6 +668,97 @@ async function onMessage(msg) {
         break;
       }
 
+      // ── YouTube Vídeo ────────────────────────
+      case 'yt': case 'ytb': case 'youtube': case 'video': case 'vid': {
+        const q = args.join(' ');
+        if (!q) {
+          await sock.sendMessage(gid, {
+            text: `📹 *Download de Vídeo*\n\nUso:\n${PREFIX}yt <link do YouTube>\n${PREFIX}yt <busca>\n\nEx: ${PREFIX}yt https://youtu.be/abc\nEx: ${PREFIX}yt funk batidão 2024`,
+          });
+          break;
+        }
+        await sock.sendMessage(gid, {text:`⬇️ Baixando vídeo: *${q.slice(0,50)}*...\n⏳ Aguarde...`}, {quoted: msg});
+        try {
+          const file   = await baixarVideo(q);
+          const buf    = fs.readFileSync(file);
+          const sizeMB = (buf.length / 1024 / 1024).toFixed(1);
+          await sock.sendMessage(gid, {
+            video: buf, mimetype: 'video/mp4',
+            caption: `✅ *Vídeo baixado!* 📹 ${sizeMB} MB`,
+          }, {quoted: msg});
+          fs.remove(file).catch(() => {});
+        } catch (e) {
+          await sock.sendMessage(gid, {text: `❌ Erro no download: ${e.message}`});
+        }
+        break;
+      }
+
+      // ── TikTok Vídeo ─────────────────────────
+      case 'tiktok': case 'tt': {
+        const url = args[0];
+        if (!url) {
+          await sock.sendMessage(gid, {text: `🎵 Uso: ${PREFIX}tiktok <link do TikTok>`});
+          break;
+        }
+        await sock.sendMessage(gid, {text: `⬇️ Baixando TikTok...\n⏳ Aguarde...`}, {quoted: msg});
+        try {
+          const file   = await baixarVideo(url);
+          const buf    = fs.readFileSync(file);
+          const sizeMB = (buf.length / 1024 / 1024).toFixed(1);
+          await sock.sendMessage(gid, {
+            video: buf, mimetype: 'video/mp4',
+            caption: `✅ *TikTok baixado!* 🎵 ${sizeMB} MB`,
+          }, {quoted: msg});
+          fs.remove(file).catch(() => {});
+        } catch (e) {
+          await sock.sendMessage(gid, {text: `❌ Erro: ${e.message}`});
+        }
+        break;
+      }
+
+      // ── Instagram Vídeo / Reel ────────────────
+      case 'insta': case 'instagram': case 'ig': case 'reel': {
+        const url = args[0];
+        if (!url) {
+          await sock.sendMessage(gid, {text: `📸 Uso: ${PREFIX}insta <link do Instagram/Reel>`});
+          break;
+        }
+        await sock.sendMessage(gid, {text: `⬇️ Baixando Instagram...\n⏳ Aguarde...`}, {quoted: msg});
+        try {
+          const file   = await baixarVideo(url);
+          const buf    = fs.readFileSync(file);
+          const sizeMB = (buf.length / 1024 / 1024).toFixed(1);
+          await sock.sendMessage(gid, {
+            video: buf, mimetype: 'video/mp4',
+            caption: `✅ *Instagram baixado!* 📸 ${sizeMB} MB`,
+          }, {quoted: msg});
+          fs.remove(file).catch(() => {});
+        } catch (e) {
+          await sock.sendMessage(gid, {text: `❌ Erro: ${e.message}`});
+        }
+        break;
+      }
+
+      // ── Consulta de Número (só dono) ──────────
+      case 'numero': case 'num': case 'cel': {
+        if (!senderOwn) {
+          await sock.sendMessage(gid, {text: '🔒 Apenas o dono pode usar este comando!'});
+          break;
+        }
+        const n = args[0];
+        if (!n) {
+          await sock.sendMessage(gid, {text: `🔍 Uso: ${PREFIX}numero <número>\nEx: ${PREFIX}numero 558694029686`});
+          break;
+        }
+        try {
+          const info = await consultarNumero(n);
+          await sock.sendMessage(gid, {text: info}, {quoted: msg});
+        } catch (e) {
+          await sock.sendMessage(gid, {text: `❌ ${e.message}`});
+        }
+        break;
+      }
+
       default: break;
     }
 
@@ -680,6 +839,8 @@ async function startBot() {
     console.log('[VERSÃO] Fallback:', JSON.stringify(version));
   }
 
+  const needsPairing = !state.creds.registered;
+
   sock = makeWASocket({
     version,
     auth: {
@@ -687,7 +848,7 @@ async function startBot() {
       keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'silent' })),
     },
     logger: pino({ level: 'silent' }),
-    printQRInTerminal: true,
+    printQRInTerminal: !needsPairing,   // QR só se não usar código
     browser: ['Ubuntu', 'Chrome', '20.0.04'],
     generateHighQualityLinkPreview: false,
     syncFullHistory: false,
@@ -698,6 +859,32 @@ async function startBot() {
     maxMsgRetryCount: 5,
     defaultQueryTimeoutMs: 60_000,
   });
+
+  // ── Pareamento por código de número ──────────────
+  if (needsPairing) {
+    const phone = OWNER_NUM.startsWith('55') ? OWNER_NUM : `55${OWNER_NUM}`;
+    setTimeout(async () => {
+      try {
+        const code = await sock.requestPairingCode(phone);
+        const c = code.match(/.{1,4}/g)?.join('-') || code; // formata: XXXX-XXXX
+        console.log('\n╔═══════════════════════════════════════════╗');
+        console.log('║       📱 CÓDIGO DE PAREAMENTO             ║');
+        console.log('║                                           ║');
+        console.log(`║   👉  ${c.padEnd(35)} ║`);
+        console.log('║                                           ║');
+        console.log('║  Como usar:                               ║');
+        console.log('║  WhatsApp → Aparelhos conectados          ║');
+        console.log('║  → Conectar aparelho                      ║');
+        console.log('║  → Conectar com número de telefone        ║');
+        console.log('╚═══════════════════════════════════════════╝\n');
+      } catch (e) {
+        console.log('[PAIRING] Falha ao gerar código:', e.message);
+        console.log('[PAIRING] Escaneie o QR Code no terminal.');
+        // forçar exibição do QR como fallback
+        sock.sendPresenceUpdate?.('unavailable').catch(() => {});
+      }
+    }, 2000);
+  }
 
   sock.ev.on('creds.update', saveCreds);
 
