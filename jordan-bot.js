@@ -14,7 +14,6 @@ const {
   isJidGroup,
 } = require('baileys');
 
-const { Boom } = require('@hapi/boom');
 const pino = require('pino');
 const path = require('path');
 const fs = require('fs-extra');
@@ -687,24 +686,35 @@ async function startBot() {
 
   sock.ev.on('connection.update', async ({ connection, lastDisconnect, qr }) => {
     if (qr) {
-      console.log('\n📱 Escaneie o QR Code ou aguarde o código de pareamento...\n');
+      console.log('\n📱 QR Code gerado — escaneie pelo WhatsApp!\n');
     }
 
     if (connection === 'close') {
-      const code      = new Boom(lastDisconnect?.error)?.output?.statusCode;
-      const loggedOut = code === DisconnectReason.loggedOut;
+      const err  = lastDisconnect?.error;
+      // extrair código de forma segura sem @hapi/boom
+      const code = err?.output?.statusCode
+        ?? err?.output?.payload?.statusCode
+        ?? err?.data?.reason
+        ?? err?.status
+        ?? (err?.isBoom ? err.output?.statusCode : undefined)
+        ?? 0;
 
-      console.log(`[CONEXÃO] Encerrada — código: ${code} — loggedOut: ${loggedOut}`);
+      // sessão inválida: loggedOut (401), badSession (500), forbidden (403) ou 405
+      const shouldClearSession = [401, 403, 405, 500].includes(code);
 
-      if (loggedOut) {
-        console.log('[SESSÃO] Expirada — apagando e reiniciando...');
-        await fs.remove(SESSION_DIR).catch(()=>{});
+      console.log(`[CONEXÃO] Encerrada — código: ${code}${shouldClearSession ? ' (limpando sessão)' : ''}`);
+
+      if (shouldClearSession) {
+        console.log('[SESSÃO] Credenciais inválidas — apagando session_data e reiniciando do zero...');
+        await fs.remove(SESSION_DIR).catch(() => {});
         retries = 0;
+        setTimeout(startBot, 3000);
+        return;
       }
 
       retries++;
-      const delay = Math.min(5000 * retries, 60000);
-      console.log(`[RECONEXÃO] Tentativa ${retries} em ${delay/1000}s...`);
+      const delay = Math.min(4000 * retries, 60000);
+      console.log(`[RECONEXÃO] Tentativa ${retries} em ${delay / 1000}s...`);
       setTimeout(startBot, delay);
     }
 
