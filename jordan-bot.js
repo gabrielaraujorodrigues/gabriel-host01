@@ -262,40 +262,125 @@ async function cmdPlay(msg, gid, args) {
   }
 }
 
+// ── Helpers de menu ─────────────────────────────────
+const STAR_LINE = '✩ ─────────────────────────── ✩';
+const STAR_DIV  = '✩ · · · · · · · · · · · · · · · ✩';
+
+function buildMenuHeader(botNome, sender, ownerName, cargo, isVip, botoff) {
+  return (
+`✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩
+🩷  *INFOS DO BOT / USER*  🩷
+✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩✩
+🩷 *Bot:* ${botNome}
+👤 *Usuário:* @${(sender||'').split('@')[0]}
+👑 *Dono:* ${ownerName}
+👥 *Cargo:* ${cargo}
+💎 *Vip:* ${isVip ? '✅ SIM ✨' : '❌ NÃO 💔'}
+🔴 *Ativo p/ membros:* ${botoff ? '🫙❌' : '🫙✅'}
+${STAR_LINE}`
+  );
+}
+
 async function cmdMenu(msg, gid, meta) {
   const txt =
-`╔══════════════════════════════════╗
-║    🤖 *JORDAN BOT OFICIAL* 🤖    ║
-╠══════════════════════════════════╣
-║                                  ║
-║  🎵 *MÚSICA & VÍDEOS*            ║
-║  ${PREFIX}play <música>  — baixar MP3   ║
-║  ${PREFIX}yt <link/busca> — vídeo YT   ║
-║  ${PREFIX}tiktok <link> — vídeo TikTok ║
-║  ${PREFIX}insta <link>  — vídeo Insta  ║
-║                                  ║
-║  🎮 *GAMES*                      ║
-║  ${PREFIX}quiz   — Quiz surpresa        ║
-║  ${PREFIX}dado   — Jogar dado           ║
-║  ${PREFIX}8ball  — Bola mágica          ║
-║                                  ║
-║  🛡️ *PROTEÇÃO DE GRUPO*          ║
-║  ${PREFIX}fechar / ${PREFIX}abrir             ║
-║  ${PREFIX}bemvindo on/off                ║
-║  ${PREFIX}autoclose on/off               ║
-║  ${PREFIX}apresentados                   ║
-║  ${PREFIX}monitoring on/off              ║
-║                                  ║
-║  ℹ️ *INFO*                        ║
-║  ${PREFIX}ping   — Status do bot         ║
-║  ${PREFIX}dono   — Info do dono          ║
-║  ${PREFIX}numero — Consultar número 🔒   ║
-║                                  ║
-╚══════════════════════════════════╝
-🤖 *${BOT_NAME}*
-👑 Dono: *${OWNER_NAME}*`;
+`${buildMenuHeader(BOT_NAME, msg.key?.participant||gid, OWNER_NAME, 'Membro', false, false)}
 
-  // GIF de anime
+✩ ▸ *MENUS DOS MENUS*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}MenuPrincipal
+🩷 ✩ → ${PREFIX}MenuDono
+🩷 ✩ → ${PREFIX}MenuAdm
+🩷 ✩ → ${PREFIX}MenuPlaquinhas
+🩷 ✩ → ${PREFIX}MenuDownloads
+🩷 ✩ → ${PREFIX}MenuPesquisas
+🩷 ✩ → ${PREFIX}MenuFigurinhas
+🩷 ✩ → ${PREFIX}MenuDinheiro
+🩷 ✩ → ${PREFIX}MenuHentaiYaoi
+🩷 ✩ → ${PREFIX}MenuEfeitos
+🩷 ✩ → ${PREFIX}MenuLogos
+🩷 ✩ → ${PREFIX}MenuBrincadeira
+🩷 ✩ → ${PREFIX}MenuNoPrefix
+${STAR_LINE}
+
+✩ ▸ *INFOS / CHECKS*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}ping
+🩷 ✩ → ${PREFIX}Atividade
+🩷 ✩ → ${PREFIX}Rankativo
+🩷 ✩ → ${PREFIX}Infodono
+🩷 ✩ → ${PREFIX}avaliar
+🩷 ✩ → ${PREFIX}me
+🩷 ✩ → ${PREFIX}alugar
+🩷 ✩ → ${PREFIX}Checkativo
+${STAR_LINE}
+
+✩ ▸ *DOWNLOADS / BAIXAR*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}Play
+🩷 ✩ → ${PREFIX}Playvid
+🩷 ✩ → ${PREFIX}playdoc
+🩷 ✩ → ${PREFIX}shazam
+🩷 ✩ → ${PREFIX}Tiktok
+🩷 ✩ → ${PREFIX}Tiktok_audio
+🩷 ✩ → ${PREFIX}Instagram
+🩷 ✩ → ${PREFIX}Insta_audio
+🩷 ✩ → ${PREFIX}Kwai
+🩷 ✩ → ${PREFIX}Multidl
+🩷 ✩ → ${PREFIX}Soundcloud
+🩷 ✩ → ${PREFIX}Mediafire
+🩷 ✩ → ${PREFIX}Gerarlink
+${STAR_LINE}
+
+✩ ▸ *PESQUISAS / INFORMAR*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}Clima
+🩷 ✩ → ${PREFIX}Book
+🩷 ✩ → ${PREFIX}Movie
+🩷 ✩ → ${PREFIX}Imdb
+🩷 ✩ → ${PREFIX}Wikipedia
+🩷 ✩ → ${PREFIX}Pinterest
+🩷 ✩ → ${PREFIX}Getnoticias
+${STAR_LINE}
+
+✩ ▸ *INTELIGÊNCIAS (AI)*
+${STAR_DIV}
+🤖🩷 ✩ → ${PREFIX}Gpt
+💭🩷 ✩ → ${PREFIX}Imagine
+🪨🩷 ✩ → ${PREFIX}ppt (pedra/papel/tesoura)
+${STAR_LINE}
+
+✩ ▸ *FIGURINHAS*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}Sticker
+🩷 ✩ → ${PREFIX}Fsticker
+🩷 ✩ → ${PREFIX}Toimg
+🩷 ✩ → ${PREFIX}Attp
+🩷 ✩ → ${PREFIX}Take
+🩷 ✩ → ${PREFIX}Roubar
+🩷 ✩ → ${PREFIX}Qc
+${STAR_LINE}
+
+✩ ▸ *BRINCADEIRAS / GAMES*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}Jogodavelha
+🩷 ✩ → ${PREFIX}forca
+🩷 ✩ → ${PREFIX}namorar
+🩷 ✩ → ${PREFIX}Gay
+🩷 ✩ → ${PREFIX}rankgay
+🩷 ✩ → ${PREFIX}Casal
+${STAR_LINE}
+
+✩ ▸ *EFEITOS / ALTERADOR*
+${STAR_DIV}
+🩷 ✩ → ${PREFIX}Videolento
+🩷 ✩ → ${PREFIX}Videorapido
+🩷 ✩ → ${PREFIX}Audiolento
+🩷 ✩ → ${PREFIX}Bass
+🩷 ✩ → ${PREFIX}Esquilo
+${STAR_LINE}
+
+🤖 *${BOT_NAME}*  👑 Dono: *${OWNER_NAME}*`;
+
   try {
     const gifBuf = await fetch(
       'https://media1.tenor.com/m/mMBbFTasFpUAAAAd/anime-girl.gif',
@@ -309,11 +394,242 @@ async function cmdMenu(msg, gid, meta) {
     await sock.sendMessage(gid, {text: txt}, {quoted:msg});
   }
 
-  // Áudio de menu
   try {
     const tts = await getTTS(`Aqui está o seu menu, aproveite! Sou o ${BOT_NAME}, seu assistente inteligente disponível 24 horas.`);
     await sock.sendMessage(gid, {audio: tts, mimetype:'audio/ogg; codecs=opus', ptt:true});
   } catch {}
+}
+
+// ── Sub-menus ────────────────────────────────────────
+async function sendSubMenu(gid, msg, titulo, cmds) {
+  const linhas = cmds.map(c => `🩷 ✩ → ${c}`).join('\n');
+  const txt =
+`${STAR_LINE}
+✩ ▸ *${titulo}*
+${STAR_DIV}
+${linhas}
+${STAR_LINE}
+🤖 *${BOT_NAME}*  👑 Dono: *${OWNER_NAME}*`;
+  await sock.sendMessage(gid, {text: txt}, {quoted: msg});
+}
+
+async function cmdMenuPrincipal(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU PRINCIPAL', [
+    `${PREFIX}ping`, `${PREFIX}Atividade`, `${PREFIX}Rankativo`, `${PREFIX}Infodono`,
+    `${PREFIX}avaliar`, `${PREFIX}me`, `${PREFIX}alugar`, `${PREFIX}Checkativo`,
+    `${PREFIX}totext`, `${PREFIX}responda`, `${PREFIX}Gtts`, `${PREFIX}Tagme`,
+    `${PREFIX}Emoji`, `${PREFIX}Tabela`, `${PREFIX}mytag`, `${PREFIX}Conselhobiblico`,
+    `${PREFIX}Cantadas`, `${PREFIX}Conselhos`, `${PREFIX}Perfil`, `${PREFIX}Calcular`,
+    `${PREFIX}Morechat`, `${PREFIX}Obesidade`, `${PREFIX}Contardias`, `${PREFIX}Fazernick`,
+    `${PREFIX}Ptvmsg`, `${PREFIX}Traduzir`, `${PREFIX}Gerarcpf`, `${PREFIX}Qrcode`,
+    `${PREFIX}getperfil`, `${PREFIX}getbio`, `${PREFIX}lermais`, `${PREFIX}spoiler`, `${PREFIX}idade`,
+  ]);
+}
+
+async function cmdMenuDono(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU DONO', [
+    `${PREFIX}Setprefix`, `${PREFIX}channel`, `${PREFIX}Fotomenu`, `${PREFIX}Servip`,
+    `${PREFIX}Listagp`, `${PREFIX}Antipalavrão`, `${PREFIX}Antiligar`,
+    `${PREFIX}Fazertm (Texto)`, `${PREFIX}Rgtm`, `${PREFIX}Tirardatm`, `${PREFIX}Listatm`,
+    `${PREFIX}anti-arqv`, `${PREFIX}donosgp`, `${PREFIX}donogp`, `${PREFIX}clearperm`,
+    `${PREFIX}Visualizarmsg`, `${PREFIX}Verificado`, `${PREFIX}Audio-menu`,
+    `${PREFIX}Addpalavra`, `${PREFIX}Delpalavra`, `${PREFIX}Ausente`, `${PREFIX}Ativo`,
+    `${PREFIX}div`, `${PREFIX}addcase`, `${PREFIX}getcase`, `${PREFIX}az`,
+    `${PREFIX}nukeid`, `${PREFIX}nukex`, `${PREFIX}nuked`, `${PREFIX}entrar`,
+    `${PREFIX}sairgp`, `${PREFIX}antisp`, `${PREFIX}sair_all`, `${PREFIX}getsite`,
+    `${PREFIX}editcase`, `${PREFIX}getaudio`, `${PREFIX}Nuke`,
+    `${PREFIX}SerAdm`, `${PREFIX}SerMembro`, `${PREFIX}so_dono`,
+    `${PREFIX}antipv`, `${PREFIX}antipv2`, `${PREFIX}antipv3`,
+    `${PREFIX}aluguel`, `${PREFIX}rm_aluguel`, `${PREFIX}lista_aluguel`,
+    `${PREFIX}ver_aluguel`, `${PREFIX}modoaluguel`,
+    `${PREFIX}Addvip [@/dias]`, `${PREFIX}Delvip [@/dias]`, `${PREFIX}Viplist`,
+    `${PREFIX}Addcmdvip (cmd)`, `${PREFIX}Delcmdvip (cmd)`, `${PREFIX}Cmdviplist`,
+    `${PREFIX}Bangp`, `${PREFIX}Unbangp`, `${PREFIX}Blockuser [@]`, `${PREFIX}Unblockuser [@]`,
+    `${PREFIX}Blockcmdg (cmd)`, `${PREFIX}Unblockcmdg (cmd)`, `${PREFIX}Listbcmdglobal`,
+    `${PREFIX}rgcmd`, `${PREFIX}delcmd`,
+    `${PREFIX}rgfig`, `${PREFIX}delfig`, `${PREFIX}listafig`,
+  ]);
+}
+
+async function cmdMenuAdm(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU ADMINISTRAÇÃO', [
+    `${PREFIX}ativar`, `${PREFIX}addparceria`, `${PREFIX}modoparceria`, `${PREFIX}delparceria`, `${PREFIX}parceria`,
+    `${PREFIX}rgrepo`, `${PREFIX}delrepo`, `${PREFIX}listrepo`,
+    `${PREFIX}autototext`, `${PREFIX}autodl`,
+    `${PREFIX}Antiimg`, `${PREFIX}antistatus`, `${PREFIX}Antivideo`, `${PREFIX}Antiaudio`,
+    `${PREFIX}Antisticker`, `${PREFIX}Antiloc`, `${PREFIX}Anticontato`, `${PREFIX}Antiddd`,
+    `${PREFIX}Antidoc`, `${PREFIX}Antilinkgp`, `${PREFIX}Antilinkhard`, `${PREFIX}Antilinkeasy`,
+    `${PREFIX}Antifake`, `${PREFIX}Antinotas`, `${PREFIX}Antipalavra`, `${PREFIX}Anticatalogo`, `${PREFIX}Antipalavrao`,
+    `${PREFIX}Ativic`, `${PREFIX}Limitecaracteres`, `${PREFIX}Bemvindo`,
+    `${PREFIX}fechargp`, `${PREFIX}abrirgp`, `${PREFIX}rmhorario`,
+    `${PREFIX}Autosticker`, `${PREFIX}Autorepo`, `${PREFIX}Odelete`,
+    `${PREFIX}x9visuunica`, `${PREFIX}x9`, `${PREFIX}So_adm`, `${PREFIX}Limitecomandos`,
+    `${PREFIX}Ephemeral`, `${PREFIX}Multiprefixo`, `${PREFIX}Tempocmd (segundos)`,
+    `${PREFIX}Antiddd-list`, `${PREFIX}Add_ddd`, `${PREFIX}Del_ddd`,
+    `${PREFIX}Legenda_imagem (Texto)`, `${PREFIX}Legenda_video (Texto)`,
+    `${PREFIX}Legendabv`, `${PREFIX}Legendasaiu`, `${PREFIX}fundobv`, `${PREFIX}fundosaiu`,
+    `${PREFIX}Autorizar`, `${PREFIX}Listanegra (Número)`, `${PREFIX}Tirardalista (Número)`,
+    `${PREFIX}ListanegraG (Número)`, `${PREFIX}TirardalistaG (Número)`,
+    `${PREFIX}Add_prefixo`, `${PREFIX}Tirar_prefixo`, `${PREFIX}Banghost`,
+    `${PREFIX}banlist`, `${PREFIX}banlistG`,
+    `${PREFIX}Mutelist`, `${PREFIX}Mute (@)`, `${PREFIX}Desmute (@)`,
+    `${PREFIX}Kick [@]`, `${PREFIX}Ban (mencionar-msg)`,
+    `${PREFIX}Promover [@]`, `${PREFIX}Rebaixar [@]`,
+    `${PREFIX}Rmphotogp`, `${PREFIX}Descgp (Texto)`, `${PREFIX}Nomegp (Nome)`,
+    `${PREFIX}Totag`, `${PREFIX}Grupo`, `${PREFIX}Status`,
+    `${PREFIX}antispam`, `${PREFIX}anticanal`, `${PREFIX}antidelete`, `${PREFIX}Limpar`,
+    `${PREFIX}Atividades`, `${PREFIX}Linkgp`, `${PREFIX}Revlinkgp`, `${PREFIX}Grupoinfo`,
+    `${PREFIX}Blockcmdgp (cmd)`, `${PREFIX}Unblockcmdgp (cmd)`, `${PREFIX}Listbcmdgp`,
+    `${PREFIX}Hidetag (txt)`, `${PREFIX}Marcar (@)`, `${PREFIX}Marcar2 (wa.me)`,
+    `${PREFIX}gppv`, `${PREFIX}apr`, `${PREFIX}digt`, `${PREFIX}regraspp`, `${PREFIX}modoia`,
+  ]);
+}
+
+async function cmdMenuDownloads(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU DOWNLOADS', [
+    `${PREFIX}Play`, `${PREFIX}Playvid`, `${PREFIX}playdoc`, `${PREFIX}shazam`,
+    `${PREFIX}Tiktok`, `${PREFIX}Tiktok_audio`,
+    `${PREFIX}Instagram`, `${PREFIX}Insta_audio`,
+    `${PREFIX}Kwai`, `${PREFIX}Multidl`, `${PREFIX}Soundcloud`, `${PREFIX}Mediafire`,
+    `${PREFIX}Gerarlink`,
+    `${PREFIX}insta_audio2`, `${PREFIX}insta_video2`, `${PREFIX}instagram2`,
+    `${PREFIX}tiktok_video2`, `${PREFIX}tiktok2`, `${PREFIX}tiktok_audio2`,
+  ]);
+}
+
+async function cmdMenuPesquisas(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU PESQUISAS', [
+    `${PREFIX}Clima`, `${PREFIX}Book`, `${PREFIX}Movie`,
+    `${PREFIX}Imdb`, `${PREFIX}Imdbinfo`, `${PREFIX}Playstore`,
+    `${PREFIX}Serie`, `${PREFIX}Aptoide`, `${PREFIX}Signo`,
+    `${PREFIX}Amazon`, `${PREFIX}Wikipedia`, `${PREFIX}Pinterest`, `${PREFIX}Getnoticias`,
+  ]);
+}
+
+async function cmdMenuFigurinhas(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU FIGURINHAS', [
+    `${PREFIX}figurinhas`, `${PREFIX}figurinhas2`, `${PREFIX}figemoji`,
+    `${PREFIX}figflork`, `${PREFIX}figale`, `${PREFIX}figmemes`,
+    `${PREFIX}figanime`, `${PREFIX}figcoreana`, `${PREFIX}figbebe`,
+    `${PREFIX}figdesenho`, `${PREFIX}figanimais`, `${PREFIX}figengracada`,
+    `${PREFIX}figraiva`, `${PREFIX}figroblox`,
+    `${PREFIX}Fsticker`, `${PREFIX}Sticker`, `${PREFIX}Toimg`,
+    `${PREFIX}Stmetadata`, `${PREFIX}Attp`,
+    `${PREFIX}rgtake`, `${PREFIX}mytake`, `${PREFIX}modtake`, `${PREFIX}rmtake`,
+    `${PREFIX}Roubar`, `${PREFIX}Take`, `${PREFIX}Qc`, `${PREFIX}Figuweb`, `${PREFIX}ttps`,
+  ]);
+}
+
+async function cmdMenuPlaquinhas(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU PLAQUINHAS', [
+    `${PREFIX}Plaq (Plaquinha)`, `${PREFIX}Plaq1`, `${PREFIX}Plaq2`,
+    `${PREFIX}Plaq3`, `${PREFIX}Plaq4`, `${PREFIX}Plaq5`,
+    `${PREFIX}Plaq6`, `${PREFIX}Plaq7`, `${PREFIX}Plaq8`, `${PREFIX}Plaq9`,
+  ]);
+}
+
+async function cmdMenuDinheiro(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU DINHEIRO / DIN DIN', [
+    `${PREFIX}loja`, `${PREFIX}comprar`, `${PREFIX}vender`, `${PREFIX}trocar`,
+    `${PREFIX}simulartrocar`, `${PREFIX}meucelular`,
+    `${PREFIX}bancos`, `${PREFIX}escolherbanco`, `${PREFIX}meubanco`,
+    `${PREFIX}salario`, `${PREFIX}trabalhar`,
+    `${PREFIX}dinheiro`, `${PREFIX}extrato`, `${PREFIX}rankmoney`,
+    `${PREFIX}depositar`, `${PREFIX}sacar`, `${PREFIX}pix`,
+    `${PREFIX}investir`, `${PREFIX}resgatar`,
+    `${PREFIX}emprestimo`, `${PREFIX}pagar`, `${PREFIX}quitar`, `${PREFIX}simular`,
+    `${PREFIX}criarempresa`, `${PREFIX}contratar`, `${PREFIX}trabalharempresa`,
+    `${PREFIX}promover`, `${PREFIX}demitir`, `${PREFIX}venderproduto`,
+    `${PREFIX}extratoempresa`, `${PREFIX}minhaempresa`, `${PREFIX}pagarfuncionario`,
+    `${PREFIX}valetransporte`,
+    `${PREFIX}criarfazenda`, `${PREFIX}compraranimal`, `${PREFIX}alimentar`,
+    `${PREFIX}coletar`, `${PREFIX}venderfazenda`, `${PREFIX}compraritemfazenda`,
+    `${PREFIX}comprarcasa`, `${PREFIX}melhorarseguranca`,
+    `${PREFIX}alistarpolicial`, `${PREFIX}roubar`, `${PREFIX}prender`, `${PREFIX}listacriminosos`,
+    `${PREFIX}comprarpet`, `${PREFIX}alimentarpet`, `${PREFIX}brincarpet`,
+    `${PREFIX}comprarpc`, `${PREFIX}hackear`,
+    `${PREFIX}mododinheiro`, `${PREFIX}addmoney`, `${PREFIX}removemoney`,
+  ]);
+}
+
+async function cmdMenuHentaiYaoi(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU HENTAI YAOI 🏳️‍🌈', [
+    `!NarutoYaoi`, `!LuffyYaoi`, `!GojoYaoi`, `!GokuYaoi`,
+    `!KakashiYaoi`, `!SasukeYaoi`, `!JirayaYaoi`, `!SaitamaYaoi`,
+    `!TanjiroYaoi`, `!TodorokiYaoi`, `!VegetaYaoi`,
+  ]);
+}
+
+async function cmdMenuEfeitos(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU EFEITOS / ALTERADOR', [
+    `${PREFIX}Videolento (marca)`, `${PREFIX}Videorapido (marca)`,
+    `${PREFIX}Videocontrario (marca)`,
+    `${PREFIX}Audiolento (marca)`, `${PREFIX}Audiorapido (marca)`,
+    `${PREFIX}speedup`, `${PREFIX}slowed`,
+    `${PREFIX}Grave (marca)`, `${PREFIX}Grave2 (marca)`,
+    `${PREFIX}Esquilo (marca)`, `${PREFIX}Estourar (marca)`,
+    `${PREFIX}Bass (marca)`, `${PREFIX}Bass2 (marca)`, `${PREFIX}Vozmenino (marca)`,
+  ]);
+}
+
+async function cmdMenuLogos(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU LOGOS', [
+    `${PREFIX}marvel`, `${PREFIX}pornohub`, `${PREFIX}space`, `${PREFIX}stone`,
+    `${PREFIX}steel`, `${PREFIX}grafity`, `${PREFIX}america`, `${PREFIX}glich3`,
+    `${PREFIX}fiction`, `${PREFIX}3dstone`, `${PREFIX}gelo`, `${PREFIX}toxic`,
+    `${PREFIX}Rainbow`, `${PREFIX}demongreen`, `${PREFIX}halloween`,
+    `${PREFIX}lapis`, `${PREFIX}neon3d`, `${PREFIX}3dgold`, `${PREFIX}neon`,
+    `${PREFIX}neon1`, `${PREFIX}Shadow`, `${PREFIX}papel`, `${PREFIX}neve`,
+    `${PREFIX}nuvem`, `${PREFIX}break`, `${PREFIX}natal`, `${PREFIX}areia`,
+    `${PREFIX}Narutologo`, `${PREFIX}smoke`, `${PREFIX}jokerlogo`,
+    `${PREFIX}transformer`, `${PREFIX}horror`, `${PREFIX}lobometal`,
+    `${PREFIX}coffecup2`, `${PREFIX}romantic`, `${PREFIX}metalfire`,
+    `${PREFIX}pink`, `${PREFIX}luxury`, `${PREFIX}cattxt`, `${PREFIX}carbon`,
+    `${PREFIX}vidro`, `${PREFIX}thunder`, `${PREFIX}cria`,
+    `${PREFIX}anime1`, `${PREFIX}ff1game`, `${PREFIX}ff2`, `${PREFIX}anime2`,
+    `${PREFIX}entardecer`, `${PREFIX}indian`, `${PREFIX}ffrose`, `${PREFIX}ffgren`,
+    `${PREFIX}chufuyu`, `${PREFIX}wolf`, `${PREFIX}dragonred`,
+  ]);
+}
+
+async function cmdMenuBrincadeira(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU BRINCADEIRAS', [
+    `${PREFIX}Jogodavelha`, `${PREFIX}Vab`, `${PREFIX}Eununca`,
+    `${PREFIX}namorar`, `${PREFIX}terminar`, `${PREFIX}divórciar`,
+    `${PREFIX}cancelarpedido`, `${PREFIX}minhadupla`, `${PREFIX}dupla`,
+    `${PREFIX}criar_familia`, `${PREFIX}deletar_familia`, `${PREFIX}sair_familia`,
+    `${PREFIX}minha_familia`, `${PREFIX}aceitar_adocao`, `${PREFIX}adotar`, `${PREFIX}expulsar_filho`,
+    `${PREFIX}forca`, `${PREFIX}rv-forca`, `${PREFIX}fc`,
+    `${PREFIX}lindo`, `${PREFIX}linda`, `${PREFIX}fiel`, `${PREFIX}Gay`,
+    `${PREFIX}Feio`, `${PREFIX}Corno`, `${PREFIX}Vesgo`, `${PREFIX}Bebado`,
+    `${PREFIX}Gostoso`, `${PREFIX}Gostosa`, `${PREFIX}Sigma`, `${PREFIX}Beta`,
+    `${PREFIX}Baiano`, `${PREFIX}Baiana`, `${PREFIX}Carioca`, `${PREFIX}Louco`,
+    `${PREFIX}Louca`, `${PREFIX}Safada`, `${PREFIX}Safado`,
+    `${PREFIX}Beijo`, `${PREFIX}Matar`, `${PREFIX}Tapa`, `${PREFIX}Chute`,
+    `${PREFIX}Chance`, `${PREFIX}Casal`, `${PREFIX}Quando`, `${PREFIX}Mencionar`,
+    `${PREFIX}Death`, `${PREFIX}carinho`, `${PREFIX}abraço`,
+    `${PREFIX}rankgay`, `${PREFIX}rankgado`, `${PREFIX}rankcorno`,
+    `${PREFIX}rankgostoso`, `${PREFIX}rankgostosa`, `${PREFIX}ranksigma`,
+    `${PREFIX}rankbeta`, `${PREFIX}rankbaiano`, `${PREFIX}rankbaiana`,
+    `${PREFIX}rankcarioca`, `${PREFIX}ranksafado`, `${PREFIX}ranksafada`,
+    `${PREFIX}ranklouco`, `${PREFIX}ranklouca`,
+    `${PREFIX}rankmacaco`, `${PREFIX}rankmacaca`,
+    `${PREFIX}rankputa`, `${PREFIX}rankcu`, `${PREFIX}rankbct`,
+    `${PREFIX}rankfalido`, `${PREFIX}rankcasal`,
+    `${PREFIX}Sorteiocoins`, `${PREFIX}Sortcoins`, `${PREFIX}Whatmusic`,
+    `${PREFIX}Gartic`, `${PREFIX}Quizfutebol`, `${PREFIX}Quizanimais`,
+    `${PREFIX}Anagrama`, `${PREFIX}Enigma`,
+    `${PREFIX}Minerar`, `${PREFIX}Minerarcoins`, `${PREFIX}Coins`,
+    `${PREFIX}Estatisticas`, `${PREFIX}Cassino`, `${PREFIX}Dadoapostado`,
+    `${PREFIX}Slot`, `${PREFIX}Rankcoins`,
+  ]);
+}
+
+async function cmdMenuNoPrefix(msg, gid) {
+  await sendSubMenu(gid, msg, 'MENU SEM PREFIX / SYSTEM', [
+    `${PREFIX}rgcmd`, `${PREFIX}delcmd`,
+    `${PREFIX}Listaddd`, `${PREFIX}Listaddi`, `${PREFIX}Destrava`,
+  ]);
 }
 
 // ═══════════════════════════════════════════════════
@@ -528,6 +844,47 @@ async function onMessage(msg) {
       // ── Menu ────────────────────────────────
       case 'menu': case 'ajuda': case 'help':
         await cmdMenu(msg, gid, meta);
+        break;
+
+      // ── Sub-menus ────────────────────────────
+      case 'menuprincipal':
+        await cmdMenuPrincipal(msg, gid);
+        break;
+      case 'menudono':
+        await cmdMenuDono(msg, gid);
+        break;
+      case 'menuadm':
+        await cmdMenuAdm(msg, gid);
+        break;
+      case 'menudownloads':
+        await cmdMenuDownloads(msg, gid);
+        break;
+      case 'menupesquisas':
+        await cmdMenuPesquisas(msg, gid);
+        break;
+      case 'menufigurinhas':
+        await cmdMenuFigurinhas(msg, gid);
+        break;
+      case 'menuplaquinhas':
+        await cmdMenuPlaquinhas(msg, gid);
+        break;
+      case 'menudinheiro':
+        await cmdMenuDinheiro(msg, gid);
+        break;
+      case 'menuhentaiyaoi':
+        await cmdMenuHentaiYaoi(msg, gid);
+        break;
+      case 'menuefeitos':
+        await cmdMenuEfeitos(msg, gid);
+        break;
+      case 'menulogos':
+        await cmdMenuLogos(msg, gid);
+        break;
+      case 'menubrincadeira':
+        await cmdMenuBrincadeira(msg, gid);
+        break;
+      case 'menunoprefix':
+        await cmdMenuNoPrefix(msg, gid);
         break;
 
       // ── Status ──────────────────────────────
