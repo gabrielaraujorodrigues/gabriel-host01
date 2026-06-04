@@ -197,62 +197,101 @@ async function getTTS(text, lang = 'pt-BR') {
   return r.buffer();
 }
 
-// Enviar TTS como PTT (voz) — converte MP3→OGG com ffmpeg ou envia como áudio normal
+// Enviar TTS como PTT (voz) — converte MP3→OGG Opus (formato correto do WhatsApp)
 async function sendTTS(gid, text, lang = 'pt-BR', quotedMsg = null) {
   try {
     const mp3 = await getTTS(text, lang);
     const opts = quotedMsg ? { quoted: quotedMsg } : {};
-    // Tenta enviar como voz (ptt) — WhatsApp aceita MP3 como ptt internamente
-    await sock.sendMessage(gid, { audio: mp3, mimetype: 'audio/mpeg', ptt: true }, opts);
+    if (FFMPEG_PATH) {
+      // Converter para OGG Opus — formato nativo PTT do WhatsApp
+      await fs.ensureDir(TEMP_DIR);
+      const tag = Date.now();
+      const inF  = path.join(TEMP_DIR, `tts_in_${tag}.mp3`);
+      const outF = path.join(TEMP_DIR, `tts_${tag}.ogg`);
+      await fs.writeFile(inF, mp3);
+      await new Promise((res, rej) =>
+        ffmpegLib(inF).audioCodec('libopus').audioBitrate(64).format('ogg')
+          .on('end', res).on('error', rej).save(outF)
+      );
+      const oggBuf = await fs.readFile(outF);
+      fs.remove(inF).catch(() => {}); fs.remove(outF).catch(() => {});
+      await sock.sendMessage(gid, { audio: oggBuf, mimetype: 'audio/ogg; codecs=opus', ptt: true }, opts);
+    } else {
+      // Sem ffmpeg: envia como áudio regular (não PTT)
+      await sock.sendMessage(gid, { audio: mp3, mimetype: 'audio/mpeg', ptt: false }, opts);
+    }
   } catch { /* silencioso */ }
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// DOWNLOAD — Música (ytdl-core + ffmpeg)
+// DOWNLOAD — Música (yt-dlp — ignora proteção anti-bot do YouTube)
 // ═══════════════════════════════════════════════════════════════════
+async function buscarImagemArtista(query) {
+  try {
+    const r = await fetch(
+      `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song&limit=1`,
+      { timeout: 6000 }
+    );
+    const d = await r.json();
+    const item = d.results?.[0];
+    if (item?.artworkUrl100) {
+      return item.artworkUrl100.replace('100x100bb', '600x600bb');
+    }
+  } catch {}
+  return null;
+}
+
 async function baixarMusica(query) {
-  const ytdl = require('@distube/ytdl-core');
+  const ytdlpBin = await getYtDlp();
   await fs.ensureDir(TEMP_DIR);
 
   const isUrl = /^https?:\/\//i.test(query);
-  let videoUrl = query, title = query.slice(0,40), duration = '';
+  let videoUrl = query, title = query.slice(0, 50), duration = '', thumbnail = '', ytLink = '';
 
   if (!isUrl) {
     const res = await ytSearch(query);
     const vid = res?.videos?.[0];
     if (!vid) throw new Error('Música não encontrada 🔍');
     if (vid.seconds > 600) throw new Error('Música muito longa (máx 10 min)');
-    videoUrl = vid.url; title = vid.title; duration = vid.timestamp;
+    videoUrl = vid.url;
+    title    = vid.title;
+    duration = vid.timestamp;
+    thumbnail = vid.thumbnail || '';
+    ytLink   = vid.url;
+  } else {
+    ytLink = videoUrl;
   }
 
-  // Se tiver ffmpeg, converte para MP3 (melhor qualidade)
-  if (FFMPEG_PATH) {
-    const outFile = path.join(TEMP_DIR, `music_${Date.now()}.mp3`);
-    await new Promise((resolve, reject) => {
-      const stream = ytdl(videoUrl, { filter: 'audioonly', quality: 'highestaudio', requestOptions: { headers: { 'User-Agent': 'Mozilla/5.0' } } });
-      stream.on('error', reject);
-      ffmpegLib(stream).audioBitrate(128).format('mp3').on('error', reject).on('end', resolve).save(outFile);
-    });
-    return { file: outFile, title, dur: duration, mime: 'audio/mpeg', ext: 'mp3' };
-  }
+  if (!ytdlpBin) throw new Error('yt-dlp não encontrado no servidor. Contate o admin.');
 
-  // Sem ffmpeg: baixa webm direto (sem conversão)
-  const outFile = path.join(TEMP_DIR, `music_${Date.now()}.webm`);
-  await new Promise((resolve, reject) => {
-    const stream = ytdl(videoUrl, { filter: 'audioonly', quality: 'lowestaudio', requestOptions: { headers: { 'User-Agent': 'Mozilla/5.0' } } });
-    stream.on('error', reject);
-    const out = fs.createWriteStream(outFile);
-    stream.pipe(out);
-    out.on('finish', resolve); out.on('error', reject);
-  });
-  return { file: outFile, title, dur: duration, mime: 'audio/webm', ext: 'webm' };
+  const tag     = Date.now();
+  const outBase = path.join(TEMP_DIR, `music_${tag}`);
+
+  // yt-dlp extrai melhor áudio e converte para MP3
+  await execAsync(
+    `"${ytdlpBin}" -x --audio-format mp3 --audio-quality 128K ` +
+    `--no-playlist --no-warnings --no-progress ` +
+    `-o "${outBase}.%(ext)s" "${videoUrl}"`,
+    { timeout: 120000 }
+  );
+
+  // Localiza o arquivo gerado (pode ser .mp3 ou .m4a)
+  const dirFiles = await fs.readdir(TEMP_DIR);
+  const found = dirFiles.find(f => f.startsWith(`music_${tag}.`));
+  if (!found) throw new Error('Download falhou — arquivo não encontrado');
+
+  const file = path.join(TEMP_DIR, found);
+  const mime = found.endsWith('.m4a') ? 'audio/mp4' : 'audio/mpeg';
+
+  return { file, title, dur: duration, thumbnail, ytLink, mime, ext: found.split('.').pop() };
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// DOWNLOAD — Vídeo YouTube
+// DOWNLOAD — Vídeo YouTube (yt-dlp)
 // ═══════════════════════════════════════════════════════════════════
 async function baixarVideoYT(query) {
-  const ytdl = require('@distube/ytdl-core');
+  const ytdlpBin = await getYtDlp();
+  if (!ytdlpBin) throw new Error('yt-dlp não encontrado no servidor.');
   await fs.ensureDir(TEMP_DIR);
   const isUrl = /^https?:\/\//i.test(query);
   let url = query;
@@ -260,20 +299,17 @@ async function baixarVideoYT(query) {
     const res = await ytSearch(query);
     const vid = res?.videos?.[0];
     if (!vid) throw new Error('Vídeo não encontrado');
+    if (vid.seconds > 600) throw new Error('Vídeo muito longo (máx 10 min)');
     url = vid.url;
   }
-  const outFile = path.join(TEMP_DIR, `vid_${Date.now()}.mp4`);
-  if (FFMPEG_PATH) {
-    await new Promise((resolve, reject) => {
-      const stream = ytdl(url, { filter: fmt => fmt.container==='mp4' && fmt.hasVideo && fmt.hasAudio, quality: 'lowestvideo', requestOptions: { headers: { 'User-Agent': 'Mozilla/5.0' } } });
-      stream.on('error', reject);
-      ffmpegLib(stream).outputOptions(['-movflags','faststart']).format('mp4').on('error', reject).on('end', resolve).save(outFile);
-    });
-  } else {
-    const stream = ytdl(url, { filter: fmt => fmt.container==='mp4' && fmt.hasVideo && fmt.hasAudio, quality: 'lowestvideo' });
-    const out = fs.createWriteStream(outFile);
-    await new Promise((res, rej) => { stream.pipe(out); out.on('finish', res); out.on('error', rej); stream.on('error', rej); });
-  }
+  const tag     = Date.now();
+  const outFile = path.join(TEMP_DIR, `vid_${tag}.mp4`);
+  await execAsync(
+    `"${ytdlpBin}" -f "bestvideo[ext=mp4][height<=480]+bestaudio[ext=m4a]/best[ext=mp4]/best" ` +
+    `--no-playlist --no-warnings --no-progress ` +
+    `-o "${outFile}" "${url}"`,
+    { timeout: 180000 }
+  );
   return outFile;
 }
 
@@ -610,11 +646,9 @@ ${STAR_LINE}
     }
   }
 
-  // Áudio de boas-vindas do menu
-  await sleep(800);
+  // Áudio de boas-vindas do menu (sem delay)
   try {
-    const tts = await getTTS('Aqui está o seu menu! Aproveite as funcionalidades. Sou o seu assistente inteligente disponível 24 horas por dia!');
-    await sock.sendMessage(gid, { audio: tts, mimetype: 'audio/mpeg', ptt: true });
+    await sendTTS(gid, 'Aqui está o seu menu! Aproveite as funcionalidades. Sou o seu assistente inteligente disponível 24 horas por dia!');
   } catch {}
 }
 
@@ -812,12 +846,33 @@ async function onMessage(msg) {
       case 'play': case 'musica': case 'música': {
         if (!args.length) { await sock.sendMessage(gid,{text:`🎵 Uso: ${PREFIX}play <música ou link>`}); break; }
         const query = args.join(' ');
-        await sock.sendMessage(gid,{text:`🔍 Buscando *${query.slice(0,50)}*...\n⏳ Aguarde...`},{quoted:msg});
+        await sock.sendMessage(gid,{text:`🎵 Baixando *${query.slice(0,50)}*... ⏳`},{quoted:msg});
         try {
-          const {file,title,dur,mime} = await baixarMusica(query);
+          const {file,title,dur,thumbnail,ytLink,mime} = await baixarMusica(query);
+
+          // 1️⃣ Enviar imagem do artista/capa + nome + link do YouTube
+          let imgBuf = null;
+          if (thumbnail) {
+            try { imgBuf = await fetch(thumbnail,{timeout:8000}).then(r=>r.buffer()); } catch {}
+          }
+          if (!imgBuf) {
+            // Tenta buscar capa no iTunes
+            const itunes = await buscarImagemArtista(query);
+            if (itunes) {
+              try { imgBuf = await fetch(itunes,{timeout:8000}).then(r=>r.buffer()); } catch {}
+            }
+          }
+
+          const caption = `🎵 *${title}*${dur ? `\n⏱️ Duração: ${dur}` : ''}${ytLink ? `\n🔗 ${ytLink}` : ''}`;
+          if (imgBuf) {
+            await sock.sendMessage(gid,{image:imgBuf,caption},{quoted:msg});
+          } else {
+            await sock.sendMessage(gid,{text:caption},{quoted:msg});
+          }
+
+          // 2️⃣ Enviar o áudio
           const buf = await fs.readFile(file);
-          await sock.sendMessage(gid,{audio:buf,mimetype:mime,fileName:`${title}.mp3`,ptt:false},{quoted:msg});
-          await sock.sendMessage(gid,{text:`✅ *${title}*  ⏱️ ${dur}`});
+          await sock.sendMessage(gid,{audio:buf,mimetype:mime,fileName:`${title}.mp3`,ptt:false});
           fs.remove(file).catch(()=>{});
         } catch(e) {
           await sock.sendMessage(gid,{text:`❌ Erro no /play: ${e.message}`});
