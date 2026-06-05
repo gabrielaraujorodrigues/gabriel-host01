@@ -130,10 +130,10 @@ const botIsAdmin = parts => {
   return isAdminOf(parts, sock.user.id.split(':')[0]+'@s.whatsapp.net');
 };
 
-// Cache de groupMetadata (2 min) para reduzir chamadas e acelerar o bot
+// Cache de groupMetadata (5 min) para reduzir chamadas e acelerar o bot
 async function getGroupMeta(gid) {
   const cached = metaCache.get(gid);
-  if (cached && Date.now() - cached.ts < 120000) return cached.meta;
+  if (cached && Date.now() - cached.ts < 300000) return cached.meta;
   try {
     const meta = await sock.groupMetadata(gid);
     metaCache.set(gid, { meta, ts: Date.now() });
@@ -633,23 +633,26 @@ ${STAR_LINE}
 
 🤖 *${BOT_NAME}* — Sempre online, sempre inteligente! 💪`;
 
-  // Envia com imagem animada
-  try {
-    const imgBuf = await fetch(MENU_IMG_URL, { timeout: 12000 }).then(r => r.buffer());
-    await sock.sendMessage(gid, { video: imgBuf, caption: txt, gifPlayback: true, mimetype: 'video/mp4', mentions: [sender] }, { quoted: msg });
-  } catch {
-    try {
-      const imgBuf = await fetch(MENU_IMG_URL, { timeout: 12000 }).then(r => r.buffer());
-      await sock.sendMessage(gid, { image: imgBuf, caption: txt, mentions: [sender] }, { quoted: msg });
-    } catch {
-      await sock.sendMessage(gid, { text: txt, mentions: [sender] }, { quoted: msg });
-    }
-  }
+  // Envia com imagem animada + áudio em paralelo (mais rápido)
+  let imgBuf = null;
+  try { imgBuf = await fetch(MENU_IMG_URL, { timeout: 10000 }).then(r => r.buffer()); } catch {}
 
-  // Áudio de boas-vindas do menu (sem delay)
-  try {
-    await sendTTS(gid, 'Aqui está o seu menu! Aproveite as funcionalidades. Sou o seu assistente inteligente disponível 24 horas por dia!');
-  } catch {}
+  const sendAudio = () => setImmediate(async () => {
+    try { await sendTTS(gid, 'Aqui está o seu menu! Aproveite as funcionalidades. Sou o seu assistente inteligente disponível 24 horas por dia!'); } catch {}
+  });
+
+  if (imgBuf) {
+    try {
+      await sock.sendMessage(gid, { video: imgBuf, caption: txt, gifPlayback: true, mimetype: 'video/mp4', mentions: [sender] }, { quoted: msg });
+    } catch {
+      try { await sock.sendMessage(gid, { image: imgBuf, caption: txt, mentions: [sender] }, { quoted: msg }); } catch {
+        await sock.sendMessage(gid, { text: txt, mentions: [sender] }, { quoted: msg });
+      }
+    }
+  } else {
+    await sock.sendMessage(gid, { text: txt, mentions: [sender] }, { quoted: msg });
+  }
+  sendAudio();
 }
 
 // Sub-menu helper
@@ -848,19 +851,18 @@ async function onMessage(msg) {
         const query = args.join(' ');
         await sock.sendMessage(gid,{text:`🎵 Baixando *${query.slice(0,50)}*... ⏳`},{quoted:msg});
         try {
-          const {file,title,dur,thumbnail,ytLink,mime} = await baixarMusica(query);
+          // Baixar música + buscar capa iTunes em paralelo (mais rápido)
+          const [musicResult, itunesUrl] = await Promise.all([
+            baixarMusica(query),
+            buscarImagemArtista(query),
+          ]);
+          const {file,title,dur,thumbnail,ytLink,mime} = musicResult;
 
           // 1️⃣ Enviar imagem do artista/capa + nome + link do YouTube
           let imgBuf = null;
-          if (thumbnail) {
-            try { imgBuf = await fetch(thumbnail,{timeout:8000}).then(r=>r.buffer()); } catch {}
-          }
-          if (!imgBuf) {
-            // Tenta buscar capa no iTunes
-            const itunes = await buscarImagemArtista(query);
-            if (itunes) {
-              try { imgBuf = await fetch(itunes,{timeout:8000}).then(r=>r.buffer()); } catch {}
-            }
+          const thumbUrl = thumbnail || itunesUrl;
+          if (thumbUrl) {
+            try { imgBuf = await fetch(thumbUrl,{timeout:8000}).then(r=>r.buffer()); } catch {}
           }
 
           const caption = `🎵 *${title}*${dur ? `\n⏱️ Duração: ${dur}` : ''}${ytLink ? `\n🔗 ${ytLink}` : ''}`;
